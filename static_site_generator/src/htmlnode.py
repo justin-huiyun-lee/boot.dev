@@ -12,9 +12,9 @@ class HTMLNode:
         str_to_return = ""
         if self.props:
             for i in self.props:
-                str_to_return += f'{i}="{self.props[i]}" '
+                str_to_return += f' {i}="{self.props[i]}"'
 
         return str_to_return
 
     def __repr__(self):
-        return f"{self.tag}"
+        return f"HTMLNode({self.tag}, {self.value}, children: {self.children}, {self.props})"
